@@ -8,30 +8,27 @@
 #include <iostream>
 #include "Complex.h"
 using namespace std;
+extern Complex sqrt_c(double real_num);
 
 int main()
 {
-	Complex z1(4, -3);
-	Complex z2(6, 8);
-	Complex z3(5, 3);
-	Complex z4(-6, 8);
-	Complex z5(-4, 3);
-	Complex z6;
-	Complex z7 = z6 * z5;
+	Complex z1(0, 1);
+	Complex z2(3, 2);
+	cout << 1 / z1 << endl;
+	cout << z1 + 5 << endl;
+	cout << z1 / 4 << endl;
+	cout << 6 + z1 << endl;
+	cout << 5 * z1 << endl;
 
-	cout << z1 << endl;
-	cout << z2 << endl;
-	cout << "z1 + z2 = " << z1 + z2 << endl;
-	cout << "z1 + z3 = " << z1 + z3 << endl;
-	cout << "z2 + z4 = " << z2 + z4 << endl;
-	cout << "z4 + z5 = " << z4 + z5 << endl;
-	cout << "z1 + z5 = " << z1 + z5 << endl;
-	cout << "z1 * z2 = " << z1 * z2 << endl;
-	cout << "z5 * z6 = " << z5 * z6 << endl;
-	cout << "z6 * z5 = " << z6 * z5 << endl;
-	cout << "z6 = " << z6 << endl;
-	cout << "z7 = " << z7 << endl;
+	double x = -9;
+	cout << sqrt_c(x) * z1 << endl;
+	if (z1 == z2)
+	{
+		cout << "Same\n";
+	}
+
+	Complex z = z1.power(9);
+	cout << "z = " << z << endl;
+	cout << "z1 * z1 = " << z1 * z1 * z1<< endl;
 	return 0;
 }
-
-
