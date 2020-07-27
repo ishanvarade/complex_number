@@ -12,11 +12,8 @@ extern Complex sqrt_c(double real_num);
 
 int main()
 {
-	int x, y;
-	cin >> x >> y;
-	Complex z(x, y);
-	cout << z << endl;
-	cout << "argument: " << z.argument() << endl;
+	Complex z = sqrt_c(-4);
+	cout << "z = " << z << endl;
 
 	return 0;
 }
