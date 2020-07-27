@@ -120,7 +120,11 @@ ostream & operator<<(ostream & os, const Complex & z) {
 		}
 	}
 	if (z.imaginary_part != 0.0) {
-		os << sign * z.imaginary_part << "i";
+		if (z.imaginary_part == 1 || z.imaginary_part == -1) {
+			os << "i";
+		} else {
+			os << sign * z.imaginary_part << "i";
+		}
 	}
 
 	return os;
@@ -194,4 +198,10 @@ Complex Complex::power(int x) const
 		z = multiply(z);
 		return z;
 	}
+}
+
+
+double Complex::argument() const
+{
+	return atan2(imaginary_part, real_part);
 }

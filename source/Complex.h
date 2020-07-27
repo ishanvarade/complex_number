@@ -37,6 +37,8 @@ public:
 	double mod() const;
 	Complex conjugate() const;
 	Complex power(int x) const;
+	double argument() const;
+
 	friend 	ostream & operator<<(ostream & os, const Complex & z);
 	friend Complex operator -(const double & real_num, const Complex & z);
 	friend Complex operator +(const double & real_num, const Complex & z);
